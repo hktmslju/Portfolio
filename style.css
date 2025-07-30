@@ -1,0 +1,1109 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(8, 8, 8);
+    color: rgb(255, 255, 255);
+    scroll-behavior: smooth; /* Smooth scroll for nav */
+}
+
+#header {
+    width: 100%;
+    height: 100vh; /* Reverted to original 100vh */
+    background-image: url(images/Back.png);
+    background-size: cover;
+    background-position: center;
+    /* Removed display: flex; flex-direction: column; from #header to revert structural change */
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -50px; /* Reverted to original negative margin */
+    /* Removed padding-top and padding-bottom from nav */
+}
+
+/* Adjust logo size */
+.logo {
+    width: 170px;
+    height: auto;
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+    position: relative;
+    padding: 10px;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* HERO SECTION - REVERTED TO ORIGINAL STRUCTURE */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px); /* Reverted to original calc height */
+    padding: 80px 8%;
+    gap: 80px;
+    transform: translateY(-8%); /* Reverted to original transform */
+    /* Removed flex-grow: 1; from desktop styles */
+    /* Removed padding-bottom from desktop styles, as it was part of the previous fix that broke structure */
+}
+.hero-animation lottie-player {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.hero-animation lottie-player:hover {
+    transform: scale(1.05);
+}
+
+
+/* Hero text */
+.header-text {
+    max-width: 600px;
+    font-size: 30px;
+    color: white;
+    text-align: left;
+}
+
+.header-text p {
+    font-size: 22px;
+    white-space: nowrap; /* Force single line */
+    margin-bottom: 15px;
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+    white-space: nowrap; /* Force single line */
+}
+
+/* Buttons */
+.hero-buttons {
+    margin-top: 30px;
+    display: flex; /* Kept display flex and gap for consistent desktop spacing (good practice) */
+    gap: 15px;
+}
+
+.hero-buttons .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #ff004f;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.hero-buttons .btn:hover {
+    background: #e60046;
+}
+
+.hero-buttons .btn-outline {
+    background: transparent;
+    border: 2px solid #ff004f;
+}
+
+.hero-buttons .btn-outline:hover {
+    background: #ff004f;
+}
+
+/* Hero Animation */
+.hero-animation {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5%;
+}
+
+.hero-animation lottie-player {
+    width: 700px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ABOUT SECTION */
+#about {
+    min-height: 100vh;
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 100px 10%;
+    margin-top: 0; /* Ensures no default margin is interfering */
+    background-image: url(images/ChatGPT\ Image\ Jul\ 30\,\ 2025\,\ 04_26_20\ PM.png);
+
+}
+
+#about h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #ff004f;
+}
+
+#about p {
+    font-size: 20px;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto 50px;
+    color: #ccc;
+}
+
+/* Highlights Section */
+.about-highlights {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.highlight {
+    background: #1a1a1a;
+    padding: 30px 40px;
+    border-radius: 15px;
+    text-align: center;
+    flex: 1;
+    min-width: 220px;
+    max-width: 300px;
+    transition: 0.3s;
+}
+
+.highlight:hover {
+    background: #ff004f;
+    color: white;
+    transform: translateY(-5px);
+}
+
+.highlight h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.continuous-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.highlight p {
+    font-size: 18px;
+    color: #fff;
+    font-weight: bolder;
+}
+
+/* New About Details Section (Skills, Experience, Education) */
+.about-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.about-box {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 32%;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.about-box:hover {
+    background: #ff004f;
+    transform: translateY(-5px);
+}
+
+.about-box h2 {
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 26px;
+}
+
+.about-box p {
+    font-size: 18px;
+    color: #fff;
+    font-weight: bolder;
+}
+
+/*---------------services------------------------>*/
+#services {
+    padding: 30px 0;
+    background-color: #000; /* Ensure the section background is black */
+    /* background-image: url(images/ChatGPT\ Image\ Jul\ 30\,\ 2025\,\ 04_26_20\ PM.png); */
+}
+
+.sub-title {
+    /* Universal section headings */
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #ff004f; /* Same as About Me */
+    text-align: center;
+}
+
+.sub-section{
+    font-size: 50px;
+    color: #ff004f;
+    text-align: center;
+    position: relative;
+    margin-bottom: 50px; /* Space between heading & content */
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    margin-top: -48px;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted minmax for better spacing */
+    grid-gap: 40px; /* Gap between service boxes */
+    margin-top: 50px;
+    padding: 0 20px; /* Add some horizontal padding to the grid container */
+}
+
+.services-list div {
+    background-color: #1a1a1a; /* A slightly lighter black for the service box background */
+    padding: 30px;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s; /* Smooth transition for hover effects */
+    display: flex; /* Use flexbox for vertical alignment */
+    flex-direction: column;
+    justify-content: space-between; /* Pushes learn more to the bottom if content is short */
+}
+
+.services-list div h2 {
+    font-size: 28px; /* Slightly larger for headings */
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #fff; /* White color for service titles */
+}
+
+.services-list div p {
+    font-weight: bolder;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #fff; /* Lighter grey for paragraph text */
+    flex-grow: 1; /* Allows paragraph to take up available space */
+    margin-bottom: 20px; /* Space before the "Learn More" link */
+}
+
+.services-list div a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff; /* A shade of purple, similar to the image */
+    font-size: 14px;
+    margin-top: 15px; /* Space above the link */
+    display: inline-block; /* Allows padding and margin to be applied */
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.services-list div a:hover {
+    color: black; /*Slightly darker purple on hover */
+}
+
+/* Hover effect for the service boxes */
+.services-list div:hover {
+    background: #ff004f; /* Darker background on hover */
+    transform: translateY(-10px); /* Lifts the box up */
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+/*-----------portfolio--------->*/
+
+/* Portfolio Section */
+#portfolio {
+    padding: 80px 0;
+    background: #111;  /* Same as About Me */
+    color: white;
+    margin-top: 40px;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 40px;
+    margin-top: 20px;
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background: #1a1a1a;
+    transition: 0.3s;
+}
+
+.work img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.work:hover img {
+    transform: scale(1.1);
+}
+
+/* Overlay */
+.layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.5s;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.work:hover .layer {
+    opacity: 1;
+}
+
+.layer h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #ff004f;
+}
+
+.layer p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+/* Tech Stack Badges */
+.tech-stack {
+    margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-stack span {
+    background: #222;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #ff004f;
+    border: 1px solid #ff004f;
+}
+
+/* Work Buttons */
+.work-buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-small {
+    padding: 8px 16px;
+    background: #ff004f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-small:hover {
+    background: #e60046;
+}
+
+.btn-small-outline {
+    padding: 8px 16px;
+    background: transparent;
+    border: 2px solid #ff004f;
+    color: #ff004f;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-small-outline:hover {
+    background: #ff004f;
+    color: white;
+}
+/* CONTACT SECTION */
+#contact {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: black;
+    color: white;
+    padding: 80px 10%;
+    flex-direction: column;
+}
+
+.contact-tagline {
+    text-align: center;
+    font-size: 20px;
+    color: #ccc;
+    margin-bottom: 50px;
+}
+
+.center-heading {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 50px;
+    color: #ff004f;
+}
+
+#contact .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+    width: 100%;
+}
+
+.contact-left {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Contact Info Cards */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.info-card {
+    display: flex;
+    align-items: center;
+    background: #1a1a1a;
+    padding: 15px 20px;
+    border-radius: 10px;
+    gap: 15px;
+    transition: transform 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    background: #222;
+}
+
+.info-card i {
+    font-size: 28px;
+    color: #ff004f;
+}
+
+.info-card h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.info-card p {
+    font-size: 16px;
+    color: #ccc;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 30px;
+    margin-right: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff004f;
+    transform: scale(1.2);
+}
+
+/* Form */
+.contact-right {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-right input,
+.contact-right textarea {
+    width: 100%;
+    padding: 15px;
+    background: #1a1a1a;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+}
+
+.contact-right textarea {
+    resize: none;
+}
+
+.contact-right button {
+    background: #ff004f;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+}
+
+.contact-right button:hover {
+    background: #e60046;
+}
+
+.copyright{
+    width: 66%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+/* HAMBURGER MENU */
+/* .hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1002;
+} */
+
+/* Mobile Menu */
+/* @media (max-width: 768px) { */
+    /* nav ul {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        padding-top: 80px;
+        transition: right 0.3s ease-in-out;
+        z-index: 1001;
+    }
+
+    nav ul.show {
+        right: 0;
+    }
+
+    nav ul li {
+        margin: 20px 0;
+        text-align: left;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        color: white;
+        padding: 10px 20px;
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+    } */
+
+    /* .hero-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .header-text h1 {
+        font-size: 40px;
+    }
+
+    .hero-animation lottie-player {
+        width: 90%;
+        max-width: 400px;
+    }
+} */
+
+/*------------new part--------->*/
+/* Dark/Light Mode */
+/* #theme-toggle {
+    background: transparent;
+    border: 2px solid #ff004f;
+    color: #ff004f;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+#theme-toggle:hover { background: #ff004f; color: #fff; }
+
+body.light-mode {
+    background: #fff;
+    color: #000;
+}
+body.light-mode nav ul li a,
+body.light-mode .contact-tagline,
+body.light-mode p { color: #000; }
+body.light-mode .about-box,
+body.light-mode .highlight,
+body.light-mode .services-list div,
+body.light-mode .work,
+body.light-mode .info-card { background: #f3f3f3; color: #000; }
+body.light-mode .btn, body.light-mode .btn-small { background: #ff004f; color: #fff; }
+
+/* Project hover (3D effect) */
+/* .work {
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.work:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+} */
+ */
+
+ /* --- Section Flow Fix --- */
+#about, 
+#services, 
+#portfolio, 
+#contact {
+    min-height: auto;
+    padding: 120px 10%;
+    margin: 0 auto;
+}
+
+/* Add consistent spacing between sections */
+#services, #portfolio, #contact {
+    margin-top: 80px;
+}
+
+/* Prevent nav clicks from cutting off section tops */
+html {
+    scroll-padding-top: 80px;
+}
+
+/* --- Scroll Indicator --- */
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px;
+    color: #ff004f;
+    cursor: pointer;
+    animation: bounce 1.5s infinite;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translate(-50%, 0); }
+    40% { transform: translate(-50%, -10px); }
+    60% { transform: translate(-50%, -5px); }
+}
+.scroll-indicator:hover {
+    color: #e60046;
+}
+
+
+
+/* --- Media Queries for Responsiveness --- */
+
+/* For screens smaller than 1024px (Laptops/Tablets) */
+@media only screen and (max-width: 1024px) {
+    .container {
+        padding: 10px 5%; /* Adjust container padding */
+    }
+
+    /* Header adjustments */
+    nav {
+        /* This was part of a previous structural change, reverting the negative margin requires adjusting nav's top position or #header's padding.
+           For now, let's keep it simple to revert structure. If nav position is off, we'll adjust specific padding. */
+    }
+
+    nav ul {
+        gap: 15px; /* Reduce gap between nav items */
+    }
+
+    .logo {
+        width: 150px; /* Slightly smaller logo */
+    }
+
+    /* Hero Section - Keep crucial mobile responsiveness here */
+    .hero-section {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+        padding: 60px 5%; /* Adjust padding */
+        height: auto; /* Allow height to adjust based on content */
+        transform: translateY(0); /* Remove transform when stacking */
+        padding-bottom: 80px; /* IMPORTANT: Keep this padding to push #about section down */
+        gap: 40px; /* Adjust gap when items stack */
+    }
+
+    .header-text {
+        max-width: 100%;
+        font-size: 24px; /* Smaller font for hero text */
+        text-align: center; /* Center align text */
+    }
+
+    .header-text p {
+        font-size: 18px;
+        white-space: normal; /* Allow text to wrap */
+    }
+
+    .header-text h1 {
+        font-size: 48px; /* Smaller font for hero heading */
+        white-space: normal; /* Allow text to wrap */
+    }
+
+    .hero-animation {
+        padding-right: 0;
+        justify-content: center; /* Center the animation */
+        margin-top: 40px; /* Add margin to separate animation from text/buttons */
+    }
+
+    .hero-animation lottie-player {
+        width: 500px; /* Smaller animation on tablets */
+    }
+
+    /* About Section */
+    #about {
+        padding: 80px 5%;
+        margin-top: 0; /* Important: Prevents extra margin when hero padding handles separation */
+    }
+
+    #about h1 {
+        font-size: 40px;
+    }
+
+    #about p {
+        font-size: 18px;
+    }
+
+    .about-highlights {
+        gap: 30px;
+    }
+
+    .highlight {
+        min-width: 200px;
+        max-width: 45%; /* Allow two highlights per row */
+        padding: 25px 30px;
+    }
+
+    .about-details {
+        flex-direction: column; /* Stack about boxes vertically */
+        gap: 20px;
+    }
+
+    .about-box {
+        max-width: 100%; /* Full width for stacked boxes */
+        min-width: unset;
+    }
+
+    /* Services Section */
+    .sub-title,
+    .sub-section {
+        font-size: 40px;
+    }
+
+    .services-list {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust minmax */
+        grid-gap: 30px;
+        padding: 0 10px;
+    }
+
+    /* Portfolio Section */
+    #portfolio {
+        padding: 60px 5%;
+    }
+
+    .work-list {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust minmax */
+        grid-gap: 30px;
+    }
+
+    /* Contact Section */
+    #contact {
+        padding: 60px 5%;
+    }
+
+    .contact-tagline {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .center-heading {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    #contact .row {
+        flex-direction: column; /* Stack contact left and right */
+        gap: 30px;
+    }
+
+    .contact-left,
+    .contact-right {
+        min-width: unset;
+        width: 100%;
+    }
+}
+
+/* For screens smaller than 768px (Mobile Devices) */
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 10px 3%; /* Further reduce container padding */
+    }
+
+    /* Header adjustments */
+    nav {
+        flex-direction: column; /* Stack logo and nav vertically */
+        align-items: center;
+        margin-top: 0; /* Ensures nav isn't pulled too high on mobile */
+    }
+
+    .logo {
+        width: 120px; /* Smaller logo on mobile */
+        margin-bottom: 20px; /* Space below logo */
+    }
+
+    nav ul {
+        flex-wrap: wrap; /* Allow nav items to wrap */
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Smaller font for nav links */
+        padding: 8px;
+    }
+
+    /* Hero Section - Crucial for animation containment and button spacing */
+    #header {
+        /* On smaller screens, allow header to shrink to fit content if necessary.
+           This helps ensure content does not get cut off. */
+        min-height: auto;
+        height: auto;
+    }
+    .hero-section {
+        padding: 40px 3%;
+        gap: 40px;
+        padding-bottom: 60px; /* IMPORTANT: This padding ensures the animation has space and pushes #about down */
+    }
+
+    .header-text {
+        font-size: 20px;
+    }
+
+    .header-text p {
+        font-size: 16px;
+    }
+
+    .header-text h1 {
+        font-size: 36px;
+    }
+
+    /* Button Spacing Fix for Mobile - THIS IS KEPT */
+    .hero-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 0; /* Reset gap as we'll use margin-bottom for vertical stacking */
+    }
+
+    .hero-buttons .btn {
+        margin-right: 0; /* Remove right margin */
+        width: 100%; /* Full width buttons */
+        text-align: center;
+        margin-bottom: 15px; /* Spacing between stacked buttons */
+    }
+
+    /* Ensure the last button doesn't have extra margin at the bottom */
+    .hero-buttons .btn:last-child {
+        margin-bottom: 0;
+    }
+
+    .hero-animation {
+        margin-top: 30px; /* Adjust margin for smaller screens to separate animation */
+    }
+
+    .hero-animation lottie-player {
+        width: 300px; /* Even smaller animation on mobile */
+    }
+
+    /* About Section */
+    #about {
+        padding: 60px 3%;
+        margin-top: 0; /* Important: Ensures no default margin is interfering */
+    }
+
+    #about h1 {
+        font-size: 36px;
+    }
+
+    #about p {
+        font-size: 16px;
+    }
+
+    .about-highlights {
+        gap: 20px;
+    }
+
+    .highlight {
+        max-width: 100%; /* Single column for highlights */
+        padding: 20px 25px;
+    }
+
+    .highlight h2 {
+        font-size: 32px;
+    }
+
+    .about-box h2 {
+        font-size: 22px;
+    }
+
+    .about-box p {
+        font-size: 16px;
+    }
+
+    /* Services Section */
+    .sub-title,
+    .sub-section {
+        font-size: 36px;
+    }
+
+    .services-list {
+        grid-template-columns: 1fr; /* Single column layout for services */
+        grid-gap: 25px;
+        padding: 0 15px;
+    }
+
+    /* Portfolio Section */
+    #portfolio {
+        padding: 40px 3%;
+    }
+
+    .work-list {
+        grid-template-columns: 1fr; /* Single column layout for portfolio */
+        grid-gap: 25px;
+    }
+
+    .layer h3 {
+        font-size: 20px;
+    }
+
+    .layer p {
+        font-size: 14px;
+    }
+
+    .tech-stack span {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+    .btn-small,
+    .btn-small-outline {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    /* Contact Section */
+    #contact {
+        padding: 40px 3%;
+    }
+
+    .contact-tagline {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+
+    .center-heading {
+        font-size: 36px;
+        margin-bottom: 25px;
+    }
+
+    .info-card {
+        flex-direction: column; /* Stack icon and text in info cards */
+        text-align: center;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .info-card h3 {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    .social-icons a {
+        font-size: 24px;
+        margin-right: 15px;
+    }
+
+    .contact-right input,
+    .contact-right textarea {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .contact-right button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .copyright {
+        width: 100%; /* Full width copyright on mobile */
+        padding: 20px 0;
+        font-size: 14px;
+    }
+}

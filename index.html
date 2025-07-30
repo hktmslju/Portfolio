@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Lottie Player CDN -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://kit.fontawesome.com/f49f3e00b9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+    <img src="images/LOGOS.png" class="logo">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <!-- <div class="hamburger">
+        <i class="fa-solid fa-bars"></i>
+    </div> -->
+</nav>
+
+            <!-- Full-screen hero section -->
+            <div class="hero-section">
+                <div class="header-text">
+                    <p>Web Dev Enthusiast | Exploring Java Programming</p>
+                    <h1>Hi, I'm Harsh Kumar</h1>
+                    <div class="hero-buttons">
+                        <a href="images/my CV.pdf" target="_blank" rel="noopener noreferrer" class="btn">Download CV</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-animation">
+                    <lottie-player 
+                        src="animations/Developer Front End.json"  
+                        background="transparent"  
+                        speed="1"  
+                        loop  
+                        autoplay>
+                    </lottie-player>
+                </div>
+                <div class="scroll-indicator" onclick="document.querySelector('#about').scrollIntoView({behavior: 'smooth'})">
+        <i class="fa-solid fa-chevron-down"></i>
+    </div>
+            </div>
+        </div>
+    </div>
+    <!------about section------------>
+
+<div id="about">
+    <div class="container about-content">
+        <h1>About Me</h1>
+        <p>
+            I am an enthusiastic <strong>Web Developer</strong> and <strong>Java Programming Learner</strong> 
+            with a strong interest in creating real-world applications. Passionate about building responsive 
+            and efficient web solutions, I’m constantly exploring new technologies to enhance my skill set.
+        </p>
+
+        <!-- Highlights Section -->
+        <div class="about-highlights">
+            <div class="highlight">
+                <h2>1+</h2>
+                <p>Years of Learning & Projects</p>
+            </div>
+            <div class="highlight">
+                <h2>5+</h2>
+                <p>Projects Built</p>
+            </div>
+            <div class="highlight">
+                <h2 class="continuous-heading">Continuous</h2>
+                <p>Exploration & Growth</p>
+            </div>
+        </div>
+
+        <!-- New 3 Sections -->
+        <div class="about-details">
+            <div class="about-box">
+                <h2>Skills</h2>
+                <p>HTML, CSS, JavaScript, Java, Git, SQL</p>
+            </div>
+            <div class="about-box">
+                <h2>Experience</h2>
+                <p>Smart India Hackathon participant, Internship at Pinnacle Labs (1 month), Academic Projects</p>
+            </div>
+            <div class="about-box">
+                <h2>Education</h2>
+                <p>Pursuing B.Tech in Information Technology<br>From Techno Main Salt Lake (MAKAUT)</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------------services------------------>
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Development (Front-end Basics)</h2>
+                <p>I design and build responsive websites using HTML, CSS, and JavaScript. Currently exploring frameworks like React to enhance my skills.I can help create simple portfolio sites, landing pages, and responsive layouts.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-java"></i>
+                <h2>Java Programming</h2>
+                <p>Good foundation in Java programming, working on problem-solving. Exploring concepts like OOPs, and algorithms.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h2>Learning Modern Tools</h2>
+                <p>Currently learning Git/GitHub for version control, and exploring frameworks & libraries to expand my development toolkit.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-diagram-project"></i>
+                <h2>Mini Projects & Assignments</h2>
+                <p>I work on academic and personal projects that help me understand real-world applications of technology.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-people-group"></i>
+                <h2>Team Collaboration</h2>
+                <p>Experience working on academic group projects and hackathons.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--- -----------portfolio------------ -->
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-section">My Work</h1>
+        <div class="work-list">
+            <!-- Project 1 -->
+            <div class="work">
+                <img src="images/project.png" alt="Interactive Virtual Herbal Garden">
+                <div class="layer">
+                    <h3>Interactive Virtual Herbal Garden</h3>
+                    <p>A web-based platform designed to educate users about medicinal plants. Built with HTML, CSS, and JavaScript, it provides an engaging virtual garden experience.</p>
+                    <div class="tech-stack">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="work-buttons">
+                        <a href="https://your-live-demo-link.com" target="_blank" class="btn-small">Live Demo</a>
+                        <a href="https://github.com/hktmslju/Virtual-Herbal-Garden" target="_blank" class="btn-small-outline">View Code</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="work">
+                <img src="images/project-02.png" alt="Language Translator Tool">
+                <div class="layer">
+                    <h3>Language Translator Tool</h3>
+                    <p>A lightweight web tool that translates text between multiple languages using API integration. Built for fast and simple text translation.</p>
+                    <div class="tech-stack">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>API</span>
+                    </div>
+                    <div class="work-buttons">
+                        <a href="https://your-live-demo-link.com" target="_blank" class="btn-small">Live Demo</a>
+                        <a href="https://github.com/hktmslju/Language-Translator-Tool" target="_blank" class="btn-small-outline">View Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------contact---------->
+
+<div id="contact">
+    <div class="container">
+        <h1 class="sub-title center-heading">Contact Me</h1>
+        <p class="contact-tagline">Let's build something great together! I'm Passionate about learning, building, and growing.</p>
+        <div class="row">
+            <!-- Left Section: Contact Info & Social -->
+            <div class="contact-left">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>hk9538509@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+91 9631943072</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Kolkata, India</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://github.com/hktmslju" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/harsh-kumar-8b586b35b/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <!-- Right Section: Form -->
+            <div class="contact-right">
+                <form action="">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © 2025 Harsh Kumar. All Rights Reserved.</p>
+    </div>
+</div>
+<script>
+    const lottieAnimation = document.getElementById('hero-lottie');
+    lottieAnimation.addEventListener('click', () => {
+        lottieAnimation.setSpeed(2);  // Make it faster on click
+        lottieAnimation.play();       // Replay animation
+        lottieAnimation.style.transform = "scale(1.1)"; // Small zoom effect
+        setTimeout(() => {
+            lottieAnimation.setSpeed(1);  // Reset speed
+            lottieAnimation.style.transform = "scale(1)"; // Reset size
+        }, 500); // back to normal after 0.5s
+    });
+</script>
+
+</body>
+</html>
+<!-- <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('nav ul');
+    const body = document.body;
+
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+        body.classList.toggle('menu-open');
+        hamburger.innerHTML = navMenu.classList.contains('show') 
+            ? '<i class="fa-solid fa-xmark"></i>' 
+            : '<i class="fa-solid fa-bars"></i>';
+    });
+</script> -->
+
